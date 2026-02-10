@@ -1,0 +1,219 @@
+body {
+  font-family: Tahoma, 'Segoe UI', sans-serif;
+  text-align: center;
+  background: linear-gradient(-45deg, #ffb3c1, #ff69b4, #ff99cc, #ffe6f0);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* Intro Screen */
+#introScreen {
+  background: linear-gradient(135deg, #ffe6f0, #ffb3c1);
+  padding: 60px 50px; /* bigger padding */
+  border-radius: 30px;
+  box-shadow: 0 0 50px rgba(255,105,180,0.6), 0 0 70px rgba(255,182,193,0.3) inset;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: sparkles inside intro box */
+/* Sparkles inside inner box */
+#introScreen::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 2%, transparent 2%) repeat;
+  background-size: 20px 20px;
+  animation: sparkleMove 6s linear infinite;
+}
+
+@keyframes sparkleMove {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* Glow text */
+#introScreen h1, #introScreen p {
+  color: #ff3385;
+  text-shadow: 0 0 8px #ff99cc, 0 0 15px #ff66a3;
+  animation: pulse 2s infinite;
+}
+
+/* Bigger fonts */
+#introScreen h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {opacity: 0.8;}
+  50% {opacity: 1;}
+  100% {opacity: 0.8;}
+}
+
+/* Start button */
+#startButton {
+  background: #ff3385;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem; /* bigger text */
+  border-radius: 25px;
+  padding: 18px 50px; /* bigger button */
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#startButton:hover {
+  transform: scale(1.15); /* bigger hover pop */
+  box-shadow: 0 0 25px #ff99cc, 0 0 50px #ff66a3;
+}
+
+/* Hide game box initially */
+#gameBox {
+  display: none;
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  background: #ff69b4;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffb3c1;
+}
+
+/* Glow for intro */
+.glow {
+  text-shadow: 0 0 5px #ff99cc, 0 0 10px #ff69b4, 0 0 20px #ff66a3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {opacity: 0.8;}
+  50% {opacity: 1;}
+  100% {opacity: 0.8;}
+}
+  
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+    button {
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  /* Valentine gradient */
+  background: linear-gradient(45deg, #ff6f91, #ff85a2);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255,105,180,0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255,105,180,0.6);
+}
+
+/* Heart appears on hover */
+button::after {
+  content: "";          /* empty by default, no space */
+  display: inline-block;
+  margin-left: 5px;     /* space between text and heart */
+  opacity: 0;
+  transform: translateY(0) scale(0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+button:hover::after {
+  content: "❤️";        /* heart shows on hover */
+  opacity: 1;
+  transform: translateY(-3px) scale(1.2);
+}
+
+ #gameBox {
+  position: relative;
+  max-width: 500px;   /* limits width */
+  width: 90%;         /* responsive on small screens */
+   min-height: 180px;   /* <- minimum height for consistency */
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+
+  /* Valentine box gradient */
+  background: linear-gradient(135deg, #ffe6f0, #ffc1d9, #ffb6c1, #ffd1e0);
+  background-size: 400% 400%;
+  animation: boxGradient 10s ease infinite;
+
+  /* Refined border & glow */
+  border: 3px solid #ff6f91;
+  box-shadow: 
+    0 10px 25px rgba(255,105,180,0.4), /* outer shadow */
+    0 0 15px rgba(255,182,193,0.3) inset; /* inner glow */
+  outline: 2px solid rgba(255,182,193,0.3);
+  outline-offset: 5px;
+
+  overflow: hidden; /* hearts stay inside */
+}
+
+@keyframes boxGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hearts animation */
+.heart {
+  position: absolute;
+  color: #ff6f91;
+  opacity: 0;
+  font-size: 20px;
+  pointer-events: none;
+  animation: floatHeart 2s linear forwards;
+}
+
+@keyframes floatHeart {
+  0% { transform: translate(0,0) scale(0.5); opacity: 0.5; }
+  50% { transform: translate(var(--x), var(--y)) scale(1); opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) scale(1.2); opacity: 0; }
+}
