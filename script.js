@@ -390,7 +390,7 @@ function noEnding() {
   noCount++;
 
   const messages = [
-    "Hey..! I said 50 points required. Try again.",
+    "Hey..! I said 100 points required. Try again.",
     "System error: 'No' not recognized. (5 chances left)",
     "Nice try. Please choose the correct answer. (4 chances left)",
     "The developer rigged this game 😌 (3 chances left)",
@@ -407,4 +407,5 @@ function noEnding() {
   buttons[0].innerText = "YES!";
   buttons[1].innerText = "No";
 }
+
 
