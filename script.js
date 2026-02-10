@@ -243,7 +243,7 @@ function nextStep(choice) {
   function() {
     setScene(
       "What is my birthday?",
-      "June 17,",
+      "June 17",
       "September 17"
     )
   }
@@ -407,3 +407,4 @@ function noEnding() {
   buttons[0].innerText = "YES!";
   buttons[1].innerText = "No";
 }
+
